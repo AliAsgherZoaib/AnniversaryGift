@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Story</title>
+  <link rel="stylesheet" href="page3.css" />
+</head>
+<body>
+  <div class="stage">
+    <!-- Arrows (hidden on first card via JS) -->
+    <button class="arrow left" id="prevBtn" aria-label="Previous">❮</button>
+    <button class="arrow right" id="nextBtn" aria-label="Next">❯</button>
+
+    <!-- Cards wrapper -->
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card active" id="card-1">
+        <div class="top">
+          <div class="circle-img" role="img" aria-label="Our picture"></div>
+        </div>
+
+        <div class="body">
+          <h2 class="title">Our Special Story</h2>
+          <p class="subtitle">Hey Cutiepie, you are my soulmate</p>
+        </div>
+
+        <div class="foot">
+          <button class="btn primary" id="openStoryBtn">Open Our Story</button>
+        </div>
+      </div>
+
+      <!-- Card 2 (Our Journey with scrollable tabs) -->
+      <div class="card" id="card-2">
+        <div class="card-header">
+          <h3 class="left-title">Our Journey</h3>
+        </div>
+
+        <div class="journey-tabs" id="journeyTabs">
+          <div class="journey-tab">
+            <div class="tab-emoji">❤️</div>
+            <div class="tab-text">
+              <div class="tab-title">Our Journey Began</div>
+              <div class="tab-date">22nd September, 2021</div>
+            </div>
+          </div>
+
+          <div class="journey-tab">
+            <div class="tab-emoji">🎬</div>
+            <div class="tab-text">
+              <div class="tab-title">First Movie Together</div>
+              <div class="tab-date">2nd July, 2024</div>
+            </div>
+          </div>
+
+          <div class="journey-tab">
+            <div class="tab-emoji">🏖️</div>
+            <div class="tab-text">
+              <div class="tab-title">First Seaview Date</div>
+              <div class="tab-date">19th October, 2021</div>
+            </div>
+          </div>
+
+          <div class="journey-tab">
+            <div class="tab-emoji">🚗</div>
+            <div class="tab-text">
+              <div class="tab-title">First Road Trip</div>
+              <div class="tab-date">13th January, 2024</div>
+            </div>
+          </div>
+
+          <div class="journey-tab">
+            <div class="tab-emoji">🏖️</div>
+            <div class="tab-text">
+              <div class="tab-title">First Picnic</div>
+              <div class="tab-date">24th August, 2025</div>
+            </div>
+          </div>
+
+          <div class="journey-tab">
+            <div class="tab-emoji">🍜</div>
+            <div class="tab-text">
+              <div class="tab-title">First Maggie Date</div>
+              <div class="tab-date">16th August, 2023</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+            <div id="card-3" class="card">
+        <h2 class="timer-heading">Our Time Together</h2>
+
+        <h3 class="timer-subtitle friends">As Friends</h3>
+        <div class="timer-container" id="timer-friends"></div>
+
+        <h3 class="timer-subtitle unofficial">As Unofficial Couple</h3>
+        <div class="timer-container" id="timer-unofficial"></div>
+
+        <h3 class="timer-subtitle official">As Official Couple</h3>
+        <div class="timer-container" id="timer-official"></div>
+        </div>
+
+      <!-- Card 4 -->
+      <div class="card" id="card-4">
+        <h2 class="title">A Special Message To My Special Person 🫶</h2>
+        <p id="special-message"></p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card" id="card-5">
+        <h1 class="title">🥂 1 year,countless more 💕</h1>
+        <img src="Us.jpg" alt="Our memory" class="memory-img">
+      </div>
+    </div>
+  </div>
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg" alt="Journey memory">
+  <div id="caption"></div>
+</div>
+  <script src="page3.js"></script>
+</body>
+</html>

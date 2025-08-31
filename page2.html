@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I love You 💖</title>
+  <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+  <div class="container">
+    <!-- First Box -->
+    <div class="box" id="introBox">
+      <div class="emoji">💖</div>
+      <p>Before moving forward, I want to ask you something...</p>
+      <button id="showQuestionBtn">Click here to know</button>
+    </div>
+
+    <!-- Question Card -->
+    <div class="question-card" id="questionCard">
+      <div class="question-emoji">🥰</div>
+      <p>💭 My question is: Will you always be mine? 💭</p>
+      <div class="button-group">
+        <button class="answer-btn yes-btn">Yesss 🥳</button>
+        <button class="answer-btn no-btn">Nooo 🥺</button>
+      </div>
+    </div>
+
+    <!-- No Response Card -->
+    <div class="response-card" id="noCard">
+      <div class="emoji">🥺</div>
+      <p>Oh no!! You can’t really say no to this, 🥺 you are already mine.  
+         Now go back and make the right choice! 😌</p>
+      <button id="goBackBtn">Go Back</button>
+    </div>
+
+    <!-- Yes Response Card -->
+    <div class="response-card" id="yesCard">
+      <div class="emoji">💕</div>
+      <p>Yesss! You always make my heart smile!  
+         I am so lucky to have you in my life 💖</p>
+      <button id="moreLoveBtn">More Love Ahead</button>
+    </div>
+
+    <!-- Secret Code Card -->
+    <div class="response-card" id="secretCard">
+      <div class="emoji">🔒</div>
+      <p>A little secret between us!<br>Enter the code to unlock more love. 🤭</p>
+      <div class="input-wrapper">
+        <span class="heart">❤️</span>
+        <input type="password" id="secretCode" placeholder="Enter code">
+        <span class="heart">❤️</span>
+      </div>
+      <button id="unlockBtn">Unlock</button>
+    </div>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="page2.js"></script>
+</body>
+</html>

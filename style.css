@@ -1,0 +1,113 @@
+/* Background */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #ffb6c1, #ff69b4, #ff1493);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  transition: opacity 1s ease; /* For fade out */
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  width: 90%;
+}
+
+/* -------- Heart (Responsive with variables) -------- */
+:root {
+  --heart-size: 60px; /* Default size for desktops */
+}
+
+@media (max-width: 768px) {
+  :root {
+    --heart-size: 45px; /* Tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --heart-size: 30px; /* Phones */
+  }
+}
+
+.heart {
+  width: var(--heart-size);
+  height: calc(var(--heart-size) * 0.9);
+  background-color: red;
+  position: relative;
+  margin: 0 auto 20px auto;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: var(--heart-size);
+  height: calc(var(--heart-size) * 0.9);
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: calc(var(--heart-size) * -0.5);
+  left: 0;
+}
+
+.heart::after {
+  left: calc(var(--heart-size) * 0.5);
+  top: 0;
+}
+
+/* Heart Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-45deg);
+  }
+}
+
+/* -------- Text -------- */
+h1 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* -------- Loading Bar -------- */
+.loading-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 15px;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background: white;
+  animation: load 6s linear forwards;
+}
+
+@keyframes load {
+  from { width: 0; }
+  to { width: 100%; }
+}
